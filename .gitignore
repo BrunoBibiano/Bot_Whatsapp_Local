@@ -1,0 +1,14 @@
+node_modules/
+auth/
+*.log
+.env
+.env.*
+!.env.example
+.runtime/
+data/*
+!data/README.md
+.test-runtime-*/
+data/exports/
+.distribution/
+release/
+*.lnk

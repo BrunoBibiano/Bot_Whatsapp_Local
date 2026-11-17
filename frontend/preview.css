@@ -1,0 +1,83 @@
+:root {
+  --wa-bg:#0B141A;
+  --wa-header:#202C33;
+  --wa-bubble:#005C4B;
+  --wa-text:#E9EDEF;
+  --wa-muted:#AAB8BF;
+  --wa-bubble-muted:#BDD0CA;
+  --wa-pattern:rgba(134,150,160,.13);
+  --wa-border:rgba(134,150,160,.12);
+  --wa-date-bg:#182229;
+  --wa-link:#8DCEF7;
+  --wa-media-bg:#103A31;
+  --wa-shadow:rgba(0,0,0,.14);
+}
+:root[data-theme=light] {
+  --wa-bg:#EFEAE2;
+  --wa-header:#F0F2F5;
+  --wa-bubble:#D9FDD3;
+  --wa-text:#111B21;
+  --wa-muted:#667781;
+  --wa-bubble-muted:#607B64;
+  --wa-pattern:rgba(120,112,101,.12);
+  --wa-border:rgba(17,27,33,.09);
+  --wa-date-bg:#FFFFFF;
+  --wa-link:#027EB5;
+  --wa-media-bg:#C2E5BC;
+  --wa-shadow:rgba(17,27,33,.08);
+}
+.whatsapp-preview-card>.section-head p {font-size:10px;margin-top:6px;}
+.wa-chat {max-width:650px;margin:21px auto 0;border:1px solid var(--wa-border);border-radius:15px;overflow:hidden;background:var(--wa-bg);color:var(--wa-text);font-family:Segoe UI,Helvetica,Arial,sans-serif;}
+.wa-chat-header {display:flex;align-items:center;gap:11px;padding:12px 17px;background:var(--wa-header);color:var(--wa-muted);border-bottom:1px solid var(--wa-border);}
+.wa-chat-header>svg {display:none;}
+.wa-chat-avatar {width:37px;height:37px;flex-shrink:0;border-radius:50%;background:var(--wa-bubble);color:var(--wa-text);display:grid;place-items:center;font-size:13px;font-weight:600;}
+.wa-chat-person {min-width:0;flex:1;}
+.wa-chat-person strong {display:block;font-size:13px;font-weight:550;color:var(--wa-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.wa-chat-person small {display:block;margin-top:3px;font-size:10px;color:var(--wa-muted);}
+.wa-chat-tools {display:flex;align-items:center;gap:18px;padding-left:10px;}
+.wa-chat-body {position:relative;isolation:isolate;min-height:290px;max-height:620px;overflow-y:auto;padding:18px 27px 17px;}
+.wa-wallpaper {position:absolute;inset:0;width:100%;height:100%;min-height:100%;pointer-events:none;z-index:-1;}
+.wa-date-pill {width:fit-content;margin:0 auto 23px;padding:6px 10px;border-radius:7px;background:var(--wa-date-bg);color:var(--wa-muted);font-size:10px;box-shadow:0 1px 2px var(--wa-shadow);text-transform:uppercase;}
+.wa-bubble {width:fit-content;max-width:85%;min-width:115px;margin-left:auto;position:relative;background:var(--wa-bubble);border-radius:9px 0 9px 9px;box-shadow:0 1px 1px var(--wa-shadow);}
+.wa-bubble:after {content:'';position:absolute;right:-8px;top:0;width:0;height:0;border-top:9px solid var(--wa-bubble);border-right:9px solid transparent;}
+.wa-bubble-content {padding:10px 12px 6px;}
+.wa-message-text {white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;font-size:13px;color:var(--wa-text);}
+.wa-message-text strong {font-weight:700;}
+.wa-message-text a {color:var(--wa-link);text-decoration:underline;word-break:break-word;}
+.wa-message-text code {font-family:Consolas,monospace;font-size:.95em;white-space:pre-wrap;}
+.wa-message-meta {display:flex;justify-content:flex-end;align-items:center;gap:5px;margin-top:3px;min-height:15px;font-size:10px;color:var(--wa-bubble-muted);font-variant-numeric:tabular-nums;}
+.wa-message-meta>svg {color:var(--wa-bubble-muted);}
+.wa-message-placeholder {display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.7;color:var(--wa-bubble-muted);max-width:315px;}
+.wa-message-placeholder>svg {margin-top:1px;}
+.wa-bubble-placeholder {opacity:.9;}
+.wa-chat-preview-label {margin:27px auto 0;max-width:fit-content;padding:6px 10px;text-align:center;font-size:9px;line-height:1.6;border-radius:7px;background:var(--wa-date-bg);color:var(--wa-muted);}
+.wa-bubble-media {width:min(330px,88%);max-width:88%;padding:3px;}
+.wa-bubble-media .wa-bubble-content {padding:7px 8px 3px;}
+.wa-media {overflow:hidden;border-radius:7px;background:var(--wa-media-bg);}
+.wa-media>img {display:block;width:100%;height:auto;max-height:340px;object-fit:contain;}
+.wa-media-placeholder {height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--wa-bubble-muted);padding:16px;text-align:center;}
+.wa-media-placeholder>span {font-size:11px;}
+.wa-preview-error {margin-top:12px!important;color:var(--status-negative);font-size:10px;line-height:1.7;}
+.wa-preview-hint {font-size:9px;margin-top:13px;line-height:1.8;color:var(--text-secondary);}
+@media(max-width:680px) {
+  .whatsapp-preview-card>.section-head {gap:9px;align-items:flex-start;}
+  .whatsapp-preview-card>.section-head h2 {font-size:13px;}
+  .whatsapp-preview-card>.section-head p {font-size:9px;}
+  .whatsapp-preview-card .outline-badge {font-size:8px;padding:6px 8px;}
+  .wa-chat {margin-top:17px;border-radius:12px;}
+  .wa-chat-header {padding:10px 11px;gap:8px;}
+  .wa-chat-avatar {width:30px;height:30px;font-size:11px;}
+  .wa-chat-header>svg {display:block;width:15px;}
+  .wa-chat-person strong {font-size:12px;}
+  .wa-chat-person small {font-size:9px;}
+  .wa-chat-tools {gap:10px;padding-left:2px;}
+  .wa-chat-tools>svg {width:14px;}
+  .wa-chat-tools>svg:first-child {display:none;}
+  .wa-chat-body {padding:15px 16px;min-height:270px;}
+  .wa-bubble {max-width:93%;}
+  .wa-bubble-media {max-width:93%;width:93%;}
+  .wa-message-text {font-size:12px;}
+  .wa-message-placeholder {font-size:11px;}
+  .wa-chat-preview-label {font-size:8px;margin-top:25px;padding:5px 8px;}
+  .wa-preview-hint {font-size:8px;}
+}
